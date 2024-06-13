@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://172.27.44.76:1433;databaseName=KDWTEST_DB;encrypt=true;trustServerCertificate=true;sendStringParametersAsUnicode=false;
+    username: sa
+    password: NS2$0lution
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+      # ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+    naming:
+      physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+  jwt:
+    secret: vmfhaltmskdlstkfkdgodyroqkfwkdbalroqkfwkdbalaaaaaaaaaaaaaaaabbbbb
+
+#  springdoc:
+#    api-docs:
+#      path: /v3/api-docs
+#    swagger-ui:
+#      path: /swagger-ui.html
+#      operationsSorter: alpha
+#      defaultModelsExpandDepth: -1
+
+# 로그 레벨 설정 (주석 처리됨)
+# logging:
+#   level:
+#     org:
+#       hibernate: DEBUG
+#       hibernate.SQL: DEBUG
+#       hibernate.type.descriptor.sql.BasicBinder: TRACE
